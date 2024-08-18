@@ -1,6 +1,7 @@
 package com.sei.project.controllers;
 
 import com.sei.project.entities.Lokasi;
+import com.sei.project.entities.Proyek;
 import com.sei.project.repositories.LokasiRepository;
 import com.sei.project.services.LokasiService;
 import jakarta.validation.Valid;
@@ -68,6 +69,17 @@ public class LokasiController {
 
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity getLokasiById(@PathVariable("id") long id){
+        Lokasi lokasi = lokasiService.getById(id);
+
+        Map<String, Object> data = new HashMap<>();
+
+        data.put("status", "200");
+        data.put("message", "success");
+        data.put("data", lokasi);
+        return new ResponseEntity(data, HttpStatus.OK);
+    }
 
 
 }
