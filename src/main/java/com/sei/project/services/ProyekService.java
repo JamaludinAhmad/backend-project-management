@@ -47,4 +47,11 @@ public class ProyekService {
 
         proyekRepository.delete(proyek);
     }
+
+    public Proyek getById(long id){
+        boolean isProyekExist = proyekRepository.existsById(id);
+        if(!isProyekExist) throw new DataNotFoundExceptionHander("proyek with id " + id + " not found");
+
+        return proyekRepository.findById(id);
+    }
 }

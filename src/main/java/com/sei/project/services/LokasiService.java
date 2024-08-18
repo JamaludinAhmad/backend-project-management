@@ -37,6 +37,13 @@ public class LokasiService {
         lokasiRepository.delete(lokasi);
     }
 
+    public Lokasi getById(long id){
+        Lokasi l = lokasiRepository.findById(id);
+        if(l == null) throw new DataNotFoundExceptionHander("lokasi with id " + id + " not found");
+
+        return lokasiRepository.findById(id);
+    }
+
 
 }
 

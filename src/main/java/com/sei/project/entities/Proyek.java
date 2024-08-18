@@ -31,7 +31,6 @@ public class Proyek {
 
     private Date tglMulai;
 
-
     private Date tglSelesai;
 
     @NotBlank(message = "pimpinan_proyek must be not blank")

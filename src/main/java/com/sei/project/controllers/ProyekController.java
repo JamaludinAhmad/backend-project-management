@@ -67,4 +67,17 @@ public class ProyekController {
         return new ResponseEntity(data, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity getProyekById(@PathVariable("id") long id){
+        Proyek proyek = proyekService.getById(id);
+
+        Map<String, Object> data = new HashMap<>();
+
+        data.put("status", "200");
+        data.put("message", "success");
+        data.put("data", proyek);
+        return new ResponseEntity(data, HttpStatus.OK);
+
+    }
+
 }
