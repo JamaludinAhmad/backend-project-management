@@ -53,3 +53,6 @@ mvn clean install
 java -jar target/your-app-name-0.0.1-SNAPSHOT.jar
 
 ```
+
+### 5. API Documentation
+Please go to https://documenter.getpostman.com/view/29222401/2sA3s9Cnwr
