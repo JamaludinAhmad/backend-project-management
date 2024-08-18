@@ -1,6 +1,6 @@
 # How to run
 
-This is a Spring Boot application built with Java. Follow the instructions below to set up and run the application locally without Docker.
+This is a Spring Boot application built with Java. Follow the instructions below to set up and run the application locally.
 
 ## Prerequisites
 
