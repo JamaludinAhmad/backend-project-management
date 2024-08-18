@@ -9,9 +9,6 @@ Make sure you have the following installed:
 1. **Java 17** (or newer)
 2. **Maven** (for building the project)
 
-3. **Spring Boot**
-   - Spring Boot does not require an explicit installation, as it is handled via Maven or Gradle.
-
 ## Setting Up
 
 ### 1. Clone the Repository
@@ -30,7 +27,7 @@ Make sure the database settings are correctly set, e.g.:
 ```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/proyek <- (you can edit with your own name)
 spring.datasource.username=root <- (you can edit with your own username)
-spring.datasource.password=your_password<- <- (you can edit with your own password) 
+spring.datasource.password=your_password <- (you can edit with your own password) 
 
 server.port=9000 <- (you can edit with your own port)
 
@@ -46,7 +43,7 @@ server.port=9000 <- (you can edit with your own port)
 mvn spring-boot:run
 ```
 
-### 4.1 run jar package 
+### 4.2 run jar package 
 #### Build the package
 ```bash
 mvn clean install
