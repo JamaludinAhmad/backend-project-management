@@ -32,7 +32,7 @@ public class LokasiController {
     }
 
     @PostMapping
-    public ResponseEntity createLokasi(@RequestBody @Valid Lokasi lokasi){
+    public ResponseEntity createLokasi(@RequestBody @Valid Lokasi lokasi) throws Exception {
         Lokasi newLokasi = lokasiService.create(lokasi);
 
         Map<String, Object> data = new HashMap<>();

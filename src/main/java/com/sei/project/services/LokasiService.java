@@ -19,7 +19,12 @@ public class LokasiService {
         return lokasiRepository.findAll();
     }
 
-    public Lokasi create(Lokasi lokasi){
+    public Lokasi create(Lokasi lokasi) throws Exception {
+        Lokasi l = lokasiRepository.findByNegaraAndProvinsiAndKotaAndNamaLokasi(
+                lokasi.getNegara(), lokasi.getProvinsi(), lokasi.getKota(), lokasi.getNamaLokasi()
+        );
+        if(l != null) throw new Exception("Data sudah ada");
+
         return lokasiRepository.save(lokasi);
     }
 
